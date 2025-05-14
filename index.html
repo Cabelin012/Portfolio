@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&family=Roboto&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">ALEXIS</div>
+    <nav>
+      <ul>
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#projects"><i class="fas fa-code"></i> Projects</a></li>
+        <li><a href="#skills"><i class="fas fa-tools"></i> Skills</a></li>
+        <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <canvas id="bokehCanvas"></canvas>
+    <div class="hero-text">
+      <h4>INTRODUCTION</h4>
+      <h1>I'm Alexis Cabelin <br><span>Computer Science Student</span></h1>
+      <p>
+        I am a BSCS student passionate about cybersecurity, software development,
+        and solving real-world problems through technology. This is my digital space
+        to showcase what I’ve learned and built.
+      </p>
+    </div>
+    <div class="hero-img">
+      <img src="images/myphoto.jpg" alt="Alexis" />
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+ <section id="projects" class="section">
+  <h2>My Projects</h2>
+
+  <div class="project-card">
+    <div class="project-info">
+      <h3>ANRDOID BASED MOTORCYCLING MONITORING SYSTEM</h3>
+      <p class="tech-used">
+        Made with:
+        <img src="project/intellij.png" alt="Android Studio" />
+        <img src="images/android studio.png" alt="Java" />
+        <img src="project/visualstudio.png" alt="Machine Learning" />
+      </p>
+      <p>
+        MotoPotato is an Android-based monitoring system designed to enhance motorcycle safety by tracking real-time rider behavior, including speed, acceleration, 
+        and navigation patterns, using GPS and accelerometer data. 
+        The mobile app provides immediate feedback and alerts, promoting safer riding habits. 
+        The system significantly reduces unsafe practices and fosters a safety culture among riders. 
+        The research demonstrates that MotoPotato can be integrated into broader road safety policies, 
+        contributing to overall traffic safety efforts.
+      </p>
+      <div class="project-buttons">
+      </div>
+    </div>
+  <div class="project-image">
+  <div class="slideshow-container">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 6</div>
+      <img src="project/login.png" style="width:100%" />
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 6</div>
+      <img src="project/register.png" style="width:100%" />
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 6</div>
+      <img src="project/2.png" style="width:100%" />
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 6</div>
+      <img src="project/1.png" style="width:100%" />
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 6</div>
+      <img src="project/3.png" style="width:100%" />
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 6</div>
+      <img src="project/4.png" style="width:100%" />
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="project/login.png" onclick="currentSlide(1)" alt="LOG IN PAGE" />
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="project/register.png" onclick="currentSlide(2)" alt="REGISTER" />
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="project/2.png" onclick="currentSlide(3)" alt="NAV SECTION" />
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="project/1.png" onclick="currentSlide(4)" alt="HOME PAGE" />
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="project/3.png" onclick="currentSlide(5)" alt="DRIVE SELECT" />
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="project/4.png" onclick="currentSlide(6)" alt="DRIVING VIEW" />
+    </div>
+  </div>
+</div>
+
+</section>
+
+
+
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-container">
+      <ul class="skills-list">
+        <li><img src="images/java.png" alt="Java">JAVA</li>
+        <li><img src="images/javascript.png" alt="JavaScript">JavaScript</li>
+        <li><img src="images/xampp.png" alt="XAMPP">XAMPP</li>
+        <li><img src="images/html.png" alt="HTML">HTML</li>
+        <li><img src="images/css.png" alt="CSS">CSS</li>
+        <li><img src="images/git.png" alt="GIT">GIT</li>
+        <li><img src="images/netbeans.png" alt="NetBeans">NETBEANS</li>
+        <li><img src="images/python.png" alt="PYTHON">PYTHON</li>
+        <li><img src="images/android studio.png" alt="ANDROID STUDIO">ANDROID STUDIO</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <p>BS Computer Science — Occidental Mindoro State College</p>
+    <p>2019 — 2025</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: alexiscabelin@gmail.com</p>
+    <p>Phone: 09XX-XXX-XXXX</p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/cabelin-alexis-v-b0ab1b348" target="_blank">linkedin.com/in/cabelin-alexis-v</a></p>
+  </section>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
