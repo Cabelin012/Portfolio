@@ -176,11 +176,18 @@ canvas {
 
 .skills-list li {
   display: flex;
+  cursor: pointer;
   flex-direction: column;
   align-items: center;
   font-weight: bold;
   font-size: 14px;
   text-align: center;
+}
+.skills-list li:hover {
+  transform: scale(1.1) rotate(-2deg);
+}
+.skills-list li:hover img {
+  transform: translateY(-5px) rotate(5deg);
 }
 
 .skills-list img {
@@ -275,7 +282,7 @@ canvas {
   width: 100%;
   max-width: 450px;
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.493);
 }
 .project-card {
   opacity: 0;
