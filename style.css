@@ -75,6 +75,16 @@ nav ul li a:hover {
   color: #aaa;
 }
 
+.relaxed-text {
+  line-height: 1.8;           /* Controls spacing between lines */
+  font-size: 1.1rem;          /* Slightly larger font */
+  margin-top: 1em;            /* Space above the paragraph */
+  max-width: 700px;           /* Optional: limit width for readability */
+  text-align: justify;        /* Align text on both left and right sides */
+}
+
+
+
 .hero-text h1 {
   font-size: 60px;
 }
@@ -463,8 +473,11 @@ canvas {
 
   .hero-text p {
     max-width: 100%;
+    
   }
 }
+
+
 
 @media (max-width: 768px) {
   header {
@@ -483,7 +496,7 @@ canvas {
   }
 
   .hero-text p {
-    font-size: 16px;
+    font-size: 50px;
   }
 
   .cards {
