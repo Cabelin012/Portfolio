@@ -1,3 +1,5 @@
+// interactive particles animation
+
 const canvas = document.getElementById("bokehCanvas");
 const ctx = canvas.getContext("2d");
 
@@ -13,13 +15,13 @@ window.addEventListener("resize", () => {
   initParticles();
 });
 
-// Update mouse position
+//  mouse position
 window.addEventListener("mousemove", (e) => {
   mouse.x = e.x;
   mouse.y = e.y;
 });
 
-// Generate random pastel/neon-like color
+// random pastel/neon-like color
 function randomColor() {
   const colors = ["#4e54c8", "#8f94fb", "#ffffff", "#ff9a9e", "#fbc2eb"];
   return colors[Math.floor(Math.random() * colors.length)];
@@ -52,7 +54,7 @@ class Particle {
     ctx.shadowBlur = 20;
     ctx.fill();
 
-    ctx.globalAlpha = 1; // Reset alpha
+    ctx.globalAlpha = 1; 
   }
 
   update() {
@@ -84,7 +86,7 @@ function animate() {
 initParticles();
 animate();
 
-
+//  section1
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -115,15 +117,45 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
+
+// section2
+
+let slideIndex2 = 1;
+showSlides2(slideIndex2);
+
+function plusSlides2(n) {
+  showSlides2(slideIndex2 += n);
+}
+
+function currentSlide2(n) {
+  showSlides2(slideIndex2 = n);
+}
+
+function showSlides2(n) {
+  let i;
+  const slides = document.getElementsByClassName("mySlides2");
+  const dots = document.getElementsByClassName("demo2");
+  const captionText = document.getElementById("caption2");
+  if (n > slides.length) slideIndex2 = 1;
+  if (n < 1) slideIndex2 = slides.length;
+  for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  for (i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+  slides[slideIndex2 - 1].style.display = "block";
+  dots[slideIndex2 - 1].className += " active";
+  captionText.innerHTML = dots[slideIndex2 - 1].alt;
+}
+
+// animation when i school on section 
+
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('show');
-        observer.unobserve(entry.target); // Stop observing after it's visible
+        observer.unobserve(entry.target); 
       }
     });
   }, {
-    threshold: 0.2 // Trigger when 20% of the element is visible
+    threshold: 0.2 
   });
 
   document.querySelectorAll('.project-card').forEach(card => {
