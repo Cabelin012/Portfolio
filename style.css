@@ -76,14 +76,12 @@ nav ul li a:hover {
 }
 
 .relaxed-text {
-  line-height: 1.8;           /* Controls spacing between lines */
-  font-size: 1.1rem;          /* Slightly larger font */
-  margin-top: 1em;            /* Space above the paragraph */
-  max-width: 700px;           /* Optional: limit width for readability */
-  text-align: justify;        /* Align text on both left and right sides */
+  line-height: 1.8;  /* spacing between lines */
+  font-size: 1.1rem;  /* larger font */
+  margin-top: 1em;    /* Space above the paragraph */
+  max-width: 700px;    /* limit width for readability */
+  text-align: justify;  /* text align*/
 }
-
-
 
 .hero-text h1 {
   font-size: 60px;
