@@ -87,35 +87,22 @@ initParticles();
 animate();
 
 //  section1
+ let slideIndex = 1;
+  showSlides(slideIndex);
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  const slides = document.getElementsByClassName("mySlides");
-  const dots = document.getElementsByClassName("demo");
-  const captionText = document.getElementById("caption");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+
+  function showSlides(n) {
+    const slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
 
 
 // section2
@@ -127,23 +114,16 @@ function plusSlides2(n) {
   showSlides2(slideIndex2 += n);
 }
 
-function currentSlide2(n) {
-  showSlides2(slideIndex2 = n);
-}
-
 function showSlides2(n) {
-  let i;
   const slides = document.getElementsByClassName("mySlides2");
-  const dots = document.getElementsByClassName("demo2");
-  const captionText = document.getElementById("caption2");
   if (n > slides.length) slideIndex2 = 1;
   if (n < 1) slideIndex2 = slides.length;
-  for (i = 0; i < slides.length; i++) slides[i].style.display = "none";
-  for (i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
   slides[slideIndex2 - 1].style.display = "block";
-  dots[slideIndex2 - 1].className += " active";
-  captionText.innerHTML = dots[slideIndex2 - 1].alt;
 }
+
 
 // animation when i school on section 
 
@@ -165,31 +145,19 @@ function showSlides2(n) {
 
   // wiki anime
 
-  let slideIndex3 = 1;
+let slideIndex3 = 1;
 showSlides3(slideIndex3);
 
 function plusSlides3(n) {
   showSlides3(slideIndex3 += n);
 }
 
-function currentSlide3(n) {
-  showSlides3(slideIndex3 = n);
-}
-
 function showSlides3(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides3");
-  let dots = document.getElementsByClassName("demo3");
-  let captionText = document.getElementById("caption3");
-  if (n > slides.length) {slideIndex3 = 1}
-  if (n < 1) {slideIndex3 = slides.length}
-  for (i = 0; i < slides.length; i++) {
+  const slides = document.getElementsByClassName("mySlides3");
+  if (n > slides.length) slideIndex3 = 1;
+  if (n < 1) slideIndex3 = slides.length;
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex3-1].style.display = "block";
-  dots[slideIndex3-1].className += " active";
-  captionText.innerHTML = dots[slideIndex3-1].alt;
+  slides[slideIndex3 - 1].style.display = "block";
 }
